@@ -1,0 +1,28 @@
+models:
+"@ds":
+  model: deepseek-coder-6.7B Q4_K_M
+  path: /home/Jennifer/llama.cpp/build/bin/llama-cli
+  args: >-
+    -m /home/Jennifer/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf
+    --ignore-eos -n 256 --temp 0.95 --top_p 0.9 --mirostat 1 --repeat_penalty 1.2
+
+"@mistral":
+  model: mistral-7b-instruct
+  path: /home/Jennifer/llama.cpp/build/bin/llama-cli
+  args: >-
+    -m /home/Jennifer/models/mistral/mistral-7b-instruct-v0.2.Q4_K_M.gguf
+    --ignore-eos -n 1024 --temp 0.9 --top_p 0.95 --repeat_penalty 1.1
+
+"@ds33":
+  model: deepseek-coder-33b-instruct
+  path: /home/Jennifer/llama.cpp/build/bin/llama-cli
+  args: >-
+    -m /home/Jennifer/models/deepseek33B/deepseek-coder-33b-instruct.Q4_K_M.gguf
+    --ignore-eos -n 1024 --temp 0.95 --repeat_penalty 1.3 --n-gpu-layers 20
+
+"@wiz":
+  model: wizardcoder-python-13b-v1.0
+  path: /home/Jennifer/llama.cpp/build/bin/llama-cli
+  args: >-
+    -m /home/Jennifer/models/wizard/wizardcoder-python-13b-v1.0.Q4_K_M.gguf
+    --ignore-eos -n 1024 --temp 0.95 --repeat_penalty 1.3
